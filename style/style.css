@@ -18,18 +18,19 @@ a {
 }
 
 nav {
-    background-color: red;
     display: flex;
-    justify-content: space-between;
     padding: 1rem 0;
+
 }
 
 .widget,
+.logo,
 .social {
-    display: flex;
-    align-items: center;
+    max-width: 33.33%;
+    margin: auto;
 }
 
+.menu ul,
 .widget ul,
 .social ul {
     display: flex;
@@ -40,7 +41,11 @@ nav {
 .social ul li {
     margin: .6rem;
     font-size: 1.2rem;
+}
 
+.widget ul li a:hover,
+.social ul li a:hover {
+    color: #20ad96;
 }
 
 .widget li.shop {
@@ -49,6 +54,7 @@ nav {
 }
 
 .widget li.shop ul.articoli {
+    /*
     position: absolute;
     top: 60px;
     visibility: hidden;
@@ -57,17 +63,21 @@ nav {
     border: 2px solid black;
     border-bottom: none;
     margin: 0;
+    */
+    display: none;
+    border-bottom: none;
+    margin: 0;
 }
 
 .widget li ul.articoli li {
-    width: 200px;
+    max-width: 200px;
     margin: 0;
     padding: .5rem;
     border-bottom: 2px solid black;
 }
 
 .widget li.shop:hover ul.articoli {
-    visibility: visible;
+    display: block;
     transition: .5s;
 }
 
@@ -77,4 +87,195 @@ nav {
     background-color: rgb(255, 190, 167);
     padding: 1rem;
     font-size: 1.5rem;
+    color: white;
+}
+
+.jumbo {
+    width: 100%;
+    height: 700px;
+    background-image: url("../img/pexels-rdne-stock-project-6923255.jpg");
+    background-size: cover;
+    background-position-y: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbo .slogan {
+    position: absolute;
+    bottom: 1rem;
+    max-width: 1500px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+}
+
+.contain {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.shop,
+section.about {
+    margin: 6rem 0;
+}
+
+
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+
+.shop p.article1,
+.shop p.article2 {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color: #20ad96;
+}
+
+.items {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+div.card {
+    border-radius: .5rem;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.card .image_product {
+    width: 100%;
+}
+
+.card .image_product img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card .info {
+    padding: 1rem;
+}
+
+.about .company {
+    display: flex;
+}
+
+.about h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.company .image,
+.company .text {
+    width: 50%;
+}
+
+.company .image {
+    height: 600px;
+    overflow: hidden;
+}
+
+.company .image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.company .text {
+    padding-left: 2rem;
+}
+
+.company .text p {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.about .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.about .logo .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #171621;
+    color: white;
+    padding: 2rem 0;
+}
+
+footer h3 {
+    color: #20ad96;
+    margin: 1rem 0;
+}
+
+footer .contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul.contatti li {
+    margin: .7rem 0;
+}
+
+footer ul.social {
+    display: flex;
+    margin: 1rem 0;
+}
+
+footer ul.social li {
+    margin-right: 1.5rem;
+}
+
+footer i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer p.copywrite {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width:768px) {
+
+    header .widget li {
+        font-size: .7rem;
+    }
+
+    .contain {
+        padding: 0 1rem;
+    }
+
+    .slogan {
+        width: 500px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about .logo {
+        margin-top: 0rem;
+    }
 }
